@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <title>
+        Physics - Aryan M. Pour
+    </title>
+
+</head>
+
+<body>
+    <!--////////////////////////////////////  Header Stuff  /////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <button onclick="switch_to('index')" style="position: absolute; left: 100px; top: 50px;">Home</button>
+    <button onclick="switch_to('about')" style="position: absolute; left: 180px; top: 50px;">About</button>
+    <button onclick="switch_to('cs')" style="position: absolute; left: 260px; top: 50px;">Com Sci</button>
+    <button onclick="switch_to('physics')" style="position: absolute; left: 365px; top: 50px;">Physics</button>
+    <a href="https://mail.google.com/mail/#inbox?compose=new" style="position: absolute; right: 120px; top: 50px;">aryanmp@ucla.edu</a>
+    <br><br><br><br><br> <!--yeah don't ask.-->
+    <hr>
+    <script>
+        function switch_to(page){
+            let destination = "";
+            switch(page){
+                case 'index':
+                    destination = "{{ url_for('index') }}";
+                    break;
+                case 'about':
+                    destination = "{{ url_for('about') }}";
+                    break;
+                case 'cs':
+                    destination = "{{ url_for('cs') }}";
+                    break;
+                case 'physics':
+                    destination = "{{ url_for('physics') }}";
+                    break;
+                default:
+                    break;
+            }
+
+            window.location.href = destination;
+        }
+    </script>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <h1 class="text" style="left: 100px;">
+        Professional Experience
+    </h1>
+    <h2 class="text" style="position: relative; left: 100px; display: inline; clear: none;">Researcher, </h2>
+    <a href="https://www.mcqst.de/support/summer-bachelor-program/" class="text" style="display: inline; clear: none; font-size: 24px; position: relative; left: 100px;">Munich Center for Quantum Science and Technology</a>
+    <ul class="text" style="position: relative; left: 100px;">
+        <li>
+            Researching quantum information theory alongside post-doctoral students
+        </li><br>
+        <li>
+            (This position is for August, 2024. More information will be added to this section in due time)
+        </li>
+    </ul>
+
+    <h1 class="text" style="left: 100px;">
+        Completed coursework
+    </h1>
+    <ul class="text" style="position: relative; left: 100px;">
+        <li>
+            Introduction to Quantum and Statistical Mechanics
+        </li><br>
+        <li>
+            Electrodynamics, Optics, and Special Relativity (and corresponding pre-requisites)
+        </li><br>
+        <li>
+            Mathematical Methods of Physics
+        </li><br>
+        <li>
+            Analytic Mechanics*  **
+        </li><br>
+        <li>
+            Electricity and Magnetism*  **
+        </li>
+        <p class="text" style="font-weight: lighter;">
+            * Note: courses with asterisk have not yet been completed, but will be completed by summer of 2024.
+        </p>
+        <p class="text" style="font-weight: lighter;">
+            ** "Upper-division" courses that differ in topics and difficulty to other specified courses
+        </p>
+    </ul>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    function handleSubmit(event){
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "{{  url_for('index')  }}",
+            data: { //n : $('#n').val(),
+                    //v: $('#v').val(),
+                    //m: $('#v').val()
+                  },
+        }).then(data => {
+            $('#results').html(data);
+        });
+
+    }
+</script>
+</html>

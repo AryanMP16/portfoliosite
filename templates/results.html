@@ -1,0 +1,14 @@
+<script>
+    function detectMob() {
+        return ( ( window.innerWidth <= 1200 ) || ( window.innerHeight <= 600 ) );
+    }
+    if(detectMob() == true){
+        document.getElementById('toUpdate').style.width = '267px';
+        document.getElementById('toUpdate').style.height = '200px';
+    }
+</script>
+
+<!-- <div style="max-width: 75%;">
+    <img id="toUpdate" src="{{ url_for('static', filename='assets/newFolder/graph'+ numPhotoToReturn + '.png') }}"/>
+    <h3 style="color: white;">Note: The y-axis is proportional to the real probability, but the wave functions have not yet been normalized so the area under the curve is not 1. The shape of the graph is still valid, however. A fix is in progress. </h3>
+</div> -->

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <title>
+        Home - Aryan M. Pour
+    </title>
+</head>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<body>
+    <!--////////////////////////////////////  Header Stuff  /////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <button onclick="switch_to('index')" style="position: absolute; left: 100px; top: 50px;">Home</button>
+    <button onclick="switch_to('about')" style="position: absolute; left: 180px; top: 50px;">About</button>
+    <button onclick="switch_to('cs')" style="position: absolute; left: 260px; top: 50px;">Com Sci</button>
+    <button onclick="switch_to('physics')" style="position: absolute; left: 365px; top: 50px;">Physics</button>
+    <a href="https://mail.google.com/mail/#inbox?compose=new" style="position: absolute; right: 120px; top: 50px;">aryanmp@ucla.edu</a>
+    <br><br><br><br><br> <!--yeah don't ask.-->
+    <hr>
+    <script>
+        function switch_to(page){
+            let destination = "";
+            switch(page){
+                case 'index':
+                    destination = "{{ url_for('index') }}";
+                    break;
+                case 'about':
+                    destination = "{{ url_for('about') }}";
+                    break;
+                case 'cs':
+                    destination = "{{ url_for('cs') }}";
+                    break;
+                case 'physics':
+                    destination = "{{ url_for('physics') }}";
+                    break;
+                default:
+                    break;
+            }
+
+            window.location.href = destination;
+        }
+    </script>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <br><br>
+        <table>
+            <tr>
+                <td style="position: relative; left: 200px;">
+                    <h1 class="text" id="pre" style="font-size: 50px; color: rgb(266,65,65); display: inline; clear: none;"></h1>
+                    <h1 class="text" style="font-size: 50px; display: inline; clear: none;">Aryan M. Pour</h1>
+                </td>
+                <td style="position: relative; left: 290px;" class="text">
+                    <div class="container">
+                        <h3 id="typed-out1"></h3>
+                        <h3 id="typed-out2"></h3>
+                        <h3 id="typed-out3"></h3>
+                        <h3 id="typed-out4"></h3>
+                        <h3 id="typed-out5"></h3>
+                        <h3 id="typed-out6"></h3>
+                        <h3 id="typed-out7"></h3>
+                        <h3 id="typed-out8"></h3>
+                        <h3 id="typed-out9"></h3>
+                    </div>
+                        
+                    <div class="container" style="font-weight: lighter; position: relative; left: 100px;" >
+                        <h3 id="typed-out-alt1"></h3>
+                        <h3 id="typed-out-alt2"></h3>
+                        <h3 id="typed-out-alt3"></h3>
+                        <h3 id="typed-out-alt4"></h3>
+                        <h3 id="typed-out-alt5"></h3>
+                        <h3 id="typed-out-alt6"></h3>
+                        <h3 id="typed-out-alt7"></h3>
+                        <h3 id="typed-out-alt8"></h3>
+                        <h3 id="typed-out-alt9"></h3>
+
+                        <script>
+                            let rVar = Math.floor(Math.random() * 2);
+                            if(rVar == 0){
+                                //code case
+                                document.getElementById("pre").innerHTML = "$\\langle \\psi |$";
+
+                                document.getElementById("typed-out1").remove();
+                                document.getElementById("typed-out2").remove();
+                                document.getElementById("typed-out3").remove();
+                                document.getElementById("typed-out4").remove();
+                                document.getElementById("typed-out5").remove();
+                                document.getElementById("typed-out6").remove();
+                                document.getElementById("typed-out7").remove();
+                                document.getElementById("typed-out8").remove();
+                                document.getElementById("typed-out9").remove();
+
+                                document.getElementById("typed-out-alt1").innerHTML = "movsxd 0x6f(%rcx,%rbp,2),%esi";
+                                document.getElementById("typed-out-alt2").innerHTML = "outsb  %ds:(%rsi),(%dx)";
+                                document.getElementById("typed-out-alt3").innerHTML = "cmp    (%rax),%ah";
+                                document.getElementById("typed-out-alt4").innerHTML = "ja     0x40207c";
+                                document.getElementById("typed-out-alt5").innerHTML = "and    %dh,0x2c(%rdx)";
+                                document.getElementById("typed-out-alt6").innerHTML = "and    %dh,0x2c(%rbp)";
+                                document.getElementById("typed-out-alt7").innerHTML = "and    %ah,0x2d(%rax,%riz,1)";
+                                document.getElementById("typed-out-alt8").innerHTML = "sub    $0x6c6f6620,%eax";
+                                document.getElementById("typed-out-alt9").innerHTML = "insb   (%dx),%es:(%rdi)";
+                            }
+                            else{
+                                //physics case
+                                document.getElementById("pre").innerHTML = ">_";
+
+                                document.getElementById("typed-out-alt1").remove();
+                                document.getElementById("typed-out-alt2").remove();
+                                document.getElementById("typed-out-alt3").remove();
+                                document.getElementById("typed-out-alt4").remove();
+                                document.getElementById("typed-out-alt5").remove();
+                                document.getElementById("typed-out-alt6").remove();
+                                document.getElementById("typed-out-alt7").remove();
+                                document.getElementById("typed-out-alt8").remove();
+                                document.getElementById("typed-out-alt9").remove();
+
+                                document.getElementById("typed-out1").innerHTML = "$\\sigma_x^2 \\sigma_p^2 \\ge -\\frac{1}{4} (\\langle (\\hat{x}-\\langle x \\rangle) \\psi |  (\\hat{p}-\\langle p \\rangle>) \\psi \\rangle - \\langle (\\hat{p}-\\langle p \\rangle>) \\psi |  (\\hat{x}-\\langle x \\rangle>) \\psi \\rangle )^2 $";
+                                document.getElementById("typed-out2").innerHTML = "$\\sigma_x^2 \\sigma_p^2 \\ge -\\frac{1}{4} (\\langle \\psi | \\hat{x}\\hat{p} | \\psi \\rangle - \\langle \\psi | \\hat{p}\\hat{x} | \\psi \\rangle)^2 $";
+                                document.getElementById("typed-out3").innerHTML = "$\\sigma_x^2 \\sigma_p^2 \\ge -\\frac{1}{4} (\\langle \\psi | \\hat{x}\\hat{p} - \\hat{p}\\hat{x} | \\psi \\rangle)^2 $";
+                                document.getElementById("typed-out4").innerHTML = "$\\sigma_x^2 \\sigma_p^2 \\ge -\\frac{1}{4} (\\langle \\psi | [\\hat{x},\\hat{p}] | \\psi \\rangle)^2 $";
+                                document.getElementById("typed-out5").innerHTML = "$\\sigma_x^2 \\sigma_p^2 \\ge -\\frac{1}{4} (\\langle [\\hat{x},\\hat{p}] \\rangle)^2 $";
+                                document.getElementById("typed-out6").innerHTML = "$\\sigma_x^2 \\sigma_p^2 \\ge -\\frac{1}{4} (i \\hbar)^2 $";
+                                document.getElementById("typed-out7").innerHTML = "$\\sigma_x^2 \\sigma_p^2 \\ge \\frac{\\hbar^2}{4} $";
+                                document.getElementById("typed-out8").innerHTML = "$\\sigma_x \\sigma_p \\ge \\frac{\\hbar}{2} $";
+                                document.getElementById("typed-out9").innerHTML = "$\\Delta x \\Delta p \\ge \\frac{\\hbar}{2} $";
+                            }
+                        </script>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    function handleSubmit(event){
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "{{  url_for('index')  }}",
+            data: { //n : $('#n').val(),
+                    //v: $('#v').val(),
+                    //m: $('#v').val()
+                  },
+        }).then(data => {
+            $('#results').html(data);
+        });
+
+    }
+</script>
+</html>

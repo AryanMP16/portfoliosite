@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <title>
+        Com Sci - Aryan M. Pour
+    </title>
+
+</head>
+
+<body>
+    <!--////////////////////////////////////  Header Stuff  /////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <button onclick="switch_to('index')" style="position: absolute; left: 100px; top: 50px;">Home</button>
+    <button onclick="switch_to('about')" style="position: absolute; left: 180px; top: 50px;">About</button>
+    <button onclick="switch_to('cs')" style="position: absolute; left: 260px; top: 50px;">Com Sci</button>
+    <button onclick="switch_to('physics')" style="position: absolute; left: 365px; top: 50px;">Physics</button>
+    <a href="https://mail.google.com/mail/#inbox?compose=new" style="position: absolute; right: 120px; top: 50px;">aryanmp@ucla.edu</a>
+    <br><br><br><br><br> <!--yeah don't ask.-->
+    <hr>
+    <script>
+        function switch_to(page){
+            let destination = "";
+            switch(page){
+                case 'index':
+                    destination = "{{ url_for('index') }}";
+                    break;
+                case 'about':
+                    destination = "{{ url_for('about') }}";
+                    break;
+                case 'cs':
+                    destination = "{{ url_for('cs') }}";
+                    break;
+                case 'physics':
+                    destination = "{{ url_for('physics') }}";
+                    break;
+                default:
+                    break;
+            }
+
+            window.location.href = destination;
+        }
+    </script>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <h1 class="text" style="left: 100px;">
+        Projects:
+    </h1>
+    <table class="text" style="left: 50px;">
+        <tr>
+            <td>
+                <div style="border-radius: 20px; width: 700px; height: 400px; overflow: hidden;">
+                    <iframe class="iframe" src="https://www.billxiwang.com"></iframe>
+                </div>
+            </td>
+            <td style="position: relative; left: 50px; width: 600px;">
+                <h2>www.billxiwang.com</h2>
+                <ul>
+                    <li>
+                        Designed and developed a visually captivating and responsive professional portfolio website for a concept artist using HTML, CSS, and JavaScript
+                    </li><br>
+                    <li>
+                        Successfully balanced aesthetic aspirations with practical programming considerations, translating the artist's creative ideas into functional website features while maintaining optimal performance and user experience
+                    </li><br>
+                    <li>
+                        Utilized JavaScript to implement interactive elements and animations, enhancing the user engagement and delivering an immersive experience that effectively showcased the artist's work
+                    </li><br>
+                    <li>
+                        Collaborated closely with the artist to understand their specific website preferences and requirements, ensuring seamless alignment between artistic vision and technical implementation
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td width="1px"><br><br>
+                <h2>http://hydrogenproject.ca</h2>
+                <ul>
+                    <li>
+                        Developed a dynamic website which computes the wave function for an electron in a hydrogen atom based on such user inputs as the nth excited state, order of the legendre polynomial, etc
+                    </li><br>
+                    <li>
+                        Utilized Flask framework to implement automated calculations within a Python backend and dynamically update website with results in real-time
+                    </li><br>
+                    <li>
+                        Integrated Matplotlib library to graph probability density of the various wave functions directly from the Python backend
+                    </li><br>
+                    <li>
+                        Designed a visually appealing frontend featuring various visuals and useful labels for enhanced user experience
+                    </li>
+                </ul>
+            </td>
+            <td><br><br>
+                <div style="border-radius: 20px; width: 700px; height: 400px; overflow: hidden; position: relative; left: 50px;">
+                    <iframe class="iframe" src="http://hydrogenproject.ca"></iframe>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <h1 class="text" style="left: 100px;">
+        Teams:
+    </h1>
+
+    <table class="text" style="left: 50px;">
+        <tr>
+            <td>
+                <div style="border-radius: 20px; width: 300px; height: 400px; overflow: hidden;">
+                    <img src="{{ url_for('static', filename='robotdemo.gif') }}" height="400" width="300"/>
+                </div>
+            </td>
+            <td style="position: relative; left: 50px; width: 1100px;">
+                <h2>1010H Robotics - Programming Lead</h2>
+                <ul>
+                    <li>
+                        Co-developed autonomous driving program (C++) that took controller inputs from human driver and replayed them autonomously in competition. Code was presented to panel of engineer judges who claimed the innovation contributed greatly to our team winning Amaze Award at the Provincial Championships
+                    </li><br>
+                    <li>
+                        Employed iterative design process to improve accuracy of in-match replaying portion of program, integrated LIDAR and photoelectric sensors, as well as PID controllers into the automation process
+                    </li><br>
+                    <li>
+                        Collaborated with 2 other team leads to prototype, 3D model, and physically construct VEX EDR robot. Team was awarded 2 Create Awards and 3 Build Awards across various region-wide tournaments for unique designs. Earned Excellence Award at local tournament for competition success rate
+                    </li><br>
+                    <li>
+                        Taught junior teams C++ programming, maintained GitHub page for public access to my code (
+                        <a href="https://github.com/aryanmp16" target="_blank" class="text">link </a>)
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    function handleSubmit(event){
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "{{  url_for('index')  }}",
+            data: { //n : $('#n').val(),
+                    //v: $('#v').val(),
+                    //m: $('#v').val()
+                  },
+        }).then(data => {
+            $('#results').html(data);
+        });
+
+    }
+</script>
+</html>

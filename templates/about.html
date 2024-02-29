@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <title>
+        About - Aryan M. Pour
+    </title>
+
+</head>
+
+<body>
+    <!--////////////////////////////////////  Header Stuff  /////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--////////////////////////////////////  Header Stuff  /////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <button onclick="switch_to('index')" style="position: absolute; left: 100px; top: 50px;">Home</button>
+    <button onclick="switch_to('about')" style="position: absolute; left: 180px; top: 50px;">About</button>
+    <button onclick="switch_to('cs')" style="position: absolute; left: 260px; top: 50px;">Com Sci</button>
+    <button onclick="switch_to('physics')" style="position: absolute; left: 365px; top: 50px;">Physics</button>
+    <a href="https://mail.google.com/mail/#inbox?compose=new" style="position: absolute; right: 120px; top: 50px;">aryanmp@ucla.edu</a>
+    <br><br><br><br><br> <!--yeah don't ask.-->
+    <hr>
+    <script>
+        function switch_to(page){
+            let destination = "";
+            switch(page){
+                case 'index':
+                    destination = "{{ url_for('index') }}";
+                    break;
+                case 'about':
+                    destination = "{{ url_for('about') }}";
+                    break;
+                case 'cs':
+                    destination = "{{ url_for('cs') }}";
+                    break;
+                case 'physics':
+                    destination = "{{ url_for('physics') }}";
+                    break;
+                default:
+                    break;
+            }
+
+            window.location.href = destination;
+        }
+    </script>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <br><br>
+    <center>
+        <table>
+            <tr>
+                <td width="300">
+                    <center style="position: relative; top: 20px;">
+                        <img src="{{ url_for('static', filename='face.png') }}" height="200" width="145"/>
+                        <br><br>
+                        <a href="https://catalog.registrar.ucla.edu/major/2023/computerscienceandengineeringbs" target="_blank" class="text" style="font-size: 14px; text-decoration: none;">B.S. Computer Science and Engineering, UCLA (2026)</a>
+                        <br>
+                        <a href="https://catalog.registrar.ucla.edu/major/2023/physicsbs" target="_blank" class="text" style="font-size: 14px; text-decoration: none;">B.S. Physics, UCLA (2026)</a>
+                    </center>
+                </td>
+                <td class="text" style="left: 100px; width: 1000px;">
+                    <h2>Career Objective</h2>
+                    My career ambitions center on the convergence of computer engineering and physics, with a specific focus on quantum computing. I aspire to apply my expertise within a quantum computing laboratory or a leading private quantum engineering firm. Equipped with coursework spanning Quantum and Statistical Mechanics, Special Relativity, Computer Systems, and Data Structures and Algorithms, I am primed to contribute meaningfully to this cutting-edge domain.
+                </td>
+        </table>
+    </center>
+        <table>
+            <tr>
+                <td class="text" style="position: relative; left: 140px; width: 1000px;">
+                <h2>Research Interests</h2>
+                <ul>
+                    <li>
+                        Quantum instruction set architecture design and quantum abstract machine engineering
+                    </li>
+                    <li>
+                        Quantum information theory and quantum optimization algorithms
+                    </li>
+                    <li>
+                        (High energy) particle physics and general research into fundamental particles/forces
+                    </li>
+                </ul>
+                </td>
+                <td class="text" style="position: relative; top: 20px; left: 0px; width: 300px; font-size: 14px;">
+                    <center>
+                        <img src="{{ url_for('static', filename='robot.png') }}" height="230" width="200"/>
+                        <br><br>
+                        Robot for the 2022 VEX Robotics Competition. Programming lead: myself; Design & fabrication lead: 
+                        <a href="https://www.linkedin.com/in/william-stewart-28ba7621b/" target="_blank" class="text">William Stewart,</a>
+                        <a href="https://www.linkedin.com/in/matthew-yuen-3ba0b02a9/" target="_blank" class="text">Matthew Yuen</a>
+                    </center>
+                </td>
+                </tr>
+            </tr>
+        </table>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    function handleSubmit(event){
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "{{  url_for('index')  }}",
+            data: { //n : $('#n').val(),
+                    //v: $('#v').val(),
+                    //m: $('#v').val()
+                  },
+        }).then(data => {
+            $('#results').html(data);
+        });
+
+    }
+</script>
+</html>

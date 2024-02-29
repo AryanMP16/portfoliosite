@@ -1,0 +1,384 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.text{
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    position: relative;
+    font-weight: bold;
+}
+
+ button{
+    border: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+
+button:hover{
+    color: rgb(226, 65, 65);
+}
+
+a{
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-size: 15px;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+
+a:hover{
+    color: rgb(226, 65, 65);
+}
+
+.iframe{
+    height: 400px;
+    width: 700px;
+    border: 0px;
+}
+
+.bottomDiv{
+    position:relative;
+    bottom:150px;
+    left:150px;
+ }
+
+ .imageDiv
+ {
+     margin-left: 100px;
+     display: block;
+     width: 345px;
+     height: 220px;
+     padding: 10px;
+     border-radius: 2px 2px 2px 2px;
+     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+ }
+/*////////////////////////////////////////////////////////////////////////////*/
+
+.fade-in-image {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /*////////////////////////////////////////////////////////////////////////////////*/
+  .container{
+    display: inline;
+    clear: none;
+    font-size: 15px;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @-webkit-keyframes typing{
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes typing2 {
+    from { width: 0 }
+    to { width: 50% }
+  }
+
+  @-webkit-keyframes typing2 {
+    from { width: 0 }
+    to { width: 50% }
+  }
+
+  @keyframes typing3 {
+    from { width: 0 }
+    to { width: 50% }
+  }
+
+  @-webkit-keyframes typing3 {
+    from { width: 0 }
+    to { width: 50% }
+  }
+
+  @keyframes typing4 {
+    from { width: 0 }
+    to { width: 40% }
+  }
+
+  @-webkit-keyframes typing4 {
+    from { width: 0 }
+    to { width: 40% }
+  }
+
+  @keyframes typing5 {
+    from { width: 0 }
+    to { width: 30% }
+  }
+
+  @-webkit-keyframes typing5 {
+    from { width: 0 }
+    to { width: 30% }
+  }
+
+  @keyframes typing6 {
+    from { width: 0 }
+    to { width: 30% }
+  }
+
+  @-webkit-keyframes typing6 {
+    from { width: 0 }
+    to { width: 30% }
+  }
+
+  @keyframes typing7 {
+    from { width: 0 }
+    to { width: 22% }
+  }
+
+  @-webkit-keyframes typing7 {
+    from { width: 0 }
+    to { width: 22% }
+  }
+
+  @keyframes typing89 {
+    from { width: 0 }
+    to { width: 16% }
+  }
+
+  @-webkit-keyframes typing89 {
+    from { width: 0 }
+    to { width: 16% }
+  }
+
+  #typed-out1{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing  4s steps(50, end) forwards;
+    animation-delay: 0s;
+    -webkit-animation: typing  4s steps(50, end) forwards;
+    -webkit-animation-delay: 0s;
+    width: 0;
+  }
+
+  #typed-out2{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing2 2s steps(30, end) forwards;
+    animation-delay: 4s;
+    -webkit-animation: typing2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 4s;
+    width: 0;
+  }
+
+  #typed-out3{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing3 2s steps(25, end) forwards;
+    animation-delay: 6s;
+    -webkit-animation: typing3 2s steps(25, end) forwards;
+    -webkit-animation-delay: 6s;
+    width: 0;
+  }
+
+  #typed-out4{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing4  2s steps(20, end) forwards;
+    animation-delay: 8s;
+    -webkit-animation: typing4  2s steps(20, end) forwards;
+    -webkit-animation-delay: 8s;
+    width: 0;
+  }
+
+  #typed-out5{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing5 1.5s steps(15, end) forwards;
+    animation-delay: 10s;
+    -webkit-animation: typing5 1.5s steps(15, end) forwards;
+    -webkit-animation-delay: 10s;
+    width: 0;
+  }
+
+  #typed-out6{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing6 1.5s steps(15, end) forwards;
+    animation-delay: 11.5s;
+    -webkit-animation: typing6 1.5s steps(15, end) forwards;
+    -webkit-animation-delay: 11.5s;
+    width: 0;
+  }
+
+  #typed-out7{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing7 1.5s steps(15, end) forwards;
+    animation-delay: 13s;
+    -webkit-animation: typing7 1.5s steps(15, end) forwards;
+    -webkit-animation-delay: 13s;
+    width: 0;
+  }
+
+  #typed-out8{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing89 1s steps(15, end) forwards;
+    animation-delay: 14.5s;
+    -webkit-animation: typing89 1s steps(7, end) forwards;
+    -webkit-animation-delay: 14.5s;
+    width: 0;
+  }
+
+  #typed-out9{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing89 1s steps(15, end) forwards;
+    animation-delay: 16s;
+    -webkit-animation: typing89 1s steps(7, end) forwards;
+    -webkit-animation-delay: 16s;
+    width: 0;
+  }
+
+  @keyframes typing_alt_1 {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @-webkit-keyframes typing_alt_1 {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes typing_alt_2 {
+    from { width: 0 }
+    to { width: 75% }
+  }
+
+  @-webkit-keyframes typing_alt_2 {
+    from { width: 0 }
+    to { width: 75% }
+  }
+
+  #typed-out-alt1{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_1 2s steps(30, end) forwards;
+    animation-delay: 0s;
+    -webkit-animation: typing_alt_1 2s steps(30, end) forwards;
+    -webkit-animation-delay: 0s;
+    width: 0;
+  }
+
+  #typed-out-alt2{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_2 2s steps(30, end) forwards;
+    animation-delay: 2s;
+    -webkit-animation: typing_alt_2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 2s;
+    width: 0;
+  }
+
+  #typed-out-alt3{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_2 2s steps(30, end) forwards;
+    animation-delay: 4s;
+    -webkit-animation: typing_alt_2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 4s;
+    width: 0;
+  }
+
+  #typed-out-alt4{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_2 2s steps(30, end) forwards;
+    animation-delay: 6s;
+    -webkit-animation: typing_alt_2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 6s;
+    width: 0;
+  }
+
+  #typed-out-alt5{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_2 2s steps(30, end) forwards;
+    animation-delay: 8s;
+    -webkit-animation: typing_alt_2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 8s;
+    width: 0;
+  }
+
+  #typed-out-alt6{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_2 2s steps(30, end) forwards;
+    animation-delay: 10s;
+    -webkit-animation: typing_alt_2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 10s;
+    width: 0;
+  }
+
+  #typed-out-alt7{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_1 2s steps(30, end) forwards;
+    animation-delay: 12s;
+    -webkit-animation: typing_alt_1 2s steps(30, end) forwards;
+    -webkit-animation-delay: 12s;
+    width: 0;
+  }
+
+  #typed-out-alt8{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_2 2s steps(30, end) forwards;
+    animation-delay: 14s;
+    -webkit-animation: typing_alt_2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 14s;
+    width: 0;
+  }
+
+  #typed-out-alt9{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing_alt_2 2s steps(30, end) forwards;
+    animation-delay: 16s;
+    -webkit-animation: typing_alt_2 2s steps(30, end) forwards;
+    -webkit-animation-delay: 16s;
+    width: 0;
+  }
